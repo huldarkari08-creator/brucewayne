@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="is" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Takk fyrir tilkynningu</title>
+  <link rel="stylesheet" href="css/pico.orange.css">
+  <link rel="stylesheet" href="css/batman.css">
+  <noscript><meta http-equiv="refresh" content="6;url=batman.html"></noscript>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-flex">
+      <div class="brand-center">
+        <svg class="bat-center-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" aria-hidden="true">
+          <path d="M32 0C20 4 10 12 6 20c2 4 8 8 10 10 4 2 8 2 8 2s-2-4 0-8 4-4 8-4 6 0 8 4 0 8 0 8 4 0 8-2c2-2 8-6 10-10-4-8-14-16-26-20z" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="wrap" style="text-align:center;max-width:720px">
+      <h1 id="thanksTitle">Takk fyrir að tilkynna atvikið!</h1>
+      <p class="lead">Við höfum móttekið upplýsingarnar þínar. Þú verður vísað aftur á heimasíðuna.</p>
+      <p class="muted">Ef ekkert gerist, <a href="Wayne Enterprises.main.html">smelltu hér</a>.</p>
+      <p class="muted small" id="countdown">Aftur á heimasíðu eftir 2 sekúndur…</p>
+    </div>
+  </main>
+
+  <script>
+    // lesa nafn úr ?name=
+    const qs = new URLSearchParams(location.search);
+    const name = (qs.get('name') || '').trim();
+    if (name) {
+      document.getElementById('thanksTitle').textContent =
+        `Takk fyrir að tilkynna atvikið, ${name}!`;
+    }
+
+    // niður-talning og snúa heim
+    let s = 2;
+    const cd = document.getElementById('countdown');
+    const t = setInterval(()=>{
+      s--;
+      if (cd) cd.textContent = `Aftur á heimasíðu eftir ${s} sekúndur…`;
+      if (s <= 0) { clearInterval(t); location.href = 'Wayne Enterprises.main.html'; }
+    }, 1000);
+  </script>
+</body>
+</html>

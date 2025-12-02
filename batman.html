@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="is" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Batman</title>
+  <link rel="stylesheet" href="css/pico.orange.css">
+  <link rel="stylesheet" href="css/batman.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== HEADER: SVG lógó + efnisyfirlit + þemurofi ===== -->
+  <header class="site-header" id="efni">
+    <div class="wrap">
+      <a class="brand" href="#efni" aria-label="Heim">
+        <!-- SVG lógó -->
+        <svg class="batlogo" viewBox="0 0 512 256" aria-hidden="true"><path d="M480 128c-34 36-88 56-136 24 8 20-4 36-28 36-34 0-46-28-60-60-14 32-26 60-60 60-24 0-36-16-28-36-48 32-102 12-136-24 32 0 64-24 72-56 36 12 64 8 88-12-4-12-8-24-8-36 20 4 44 16 60 32 16-16 40-28 60-32 0 12-4 24-8 36 24 20 52 24 88 12 8 32 40 56 72 56Z" fill="currentColor"/></svg>
+        <span>BAT-VEFUR</span>
+      </a>
+
+      <!-- Fellivalmynd í síma (checkbox-trikk) -->
+      <input id="nav-toggle" type="checkbox" hidden>
+      <label for="nav-toggle" class="hamburger" aria-label="Opna valmynd">≡</label>
+
+
+      <nav class="nav">
+        <a href="#kvikun"><i class="icon-html-five2"></i> Kvikun</a>
+        <a href="#slideshow"><i class="icon-file-picture"></i> Myndasýning</a>
+        <a href="#tafla"><i class="icon-bubbles4"></i> Tafla</a>
+        <a href="#form"><i class="icon-user-check"></i> Form</a>
+        <button class="mode" id="modeBtn" aria-label="Ljóst/Dökkt">🌗</button>
+        <a href="Wayne Enterprises.main.html">til baka</a>
+      </nav>
+    </div>
+  </header> 
+
+  <!-- ===== HERO með bat-signal kvikun ===== -->
+<section class="hero">
+    <div class="brand-center">
+  <img src="myndir/batman symbol.jpg" alt="Batman Logo" class="batman-symbol" />
+    </div>
+  <div class="wrap hero-inner">
+    <h1>Verndari Gotham</h1>
+    <p class="lead"></p>
+
+    <!-- Batman-myndin situr INNI í boxinu og hreyfist með því -->
+    <div class="signal">
+      <img class="signal-img" src="myndir/batman.jpg" alt="Batman" />
+    </div>
+  </div>
+</section>
+
+  <!-- ===== KVIKUN / CARDAR ===== -->
+  <section id="kvikun" class="section">
+    <div class="wrap">
+      <h2>Kvikun</h2>
+      <p class="muted"></p>
+      <div class="cards">
+        <article class="card"><h3>Hreint CSS</h3><p>Kvikun og slideshow án JS.</p></article>
+        <article class="card"><h3>Pico litir</h3><p>Samræmd litapalletta (light/dark).</p></article>
+        <article class="card"><h3>Skalanlegt</h3><p>Myndir og skipulag aðlagast.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MYNDASÝNING (slideshow – pure CSS) ===== -->
+  <section id="slideshow" class="section alt">
+    <div class="wrap">
+      <h2>Myndasýning</h2>
+      <div class="slideshow">
+        <figure class="slide s1"><img src="myndir/batman i borginni.jpg" alt="Batman í borginni"></figure>
+        <figure class="slide s2"><img src="myndir/Gotham skýjakljúfar.jpg" alt="Gotham skýjakljúfar"></figure>
+        <figure class="slide s3"><img src="myndir/Batmobile við nætur.jpg" alt="Batmobile við nætur"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TAFLA (alltaf sýnileg, scroll á síma) ===== -->
+  <section id="tafla" class="section">
+    <div class="wrap">
+      <h2>Vaktarplan</h2>
+      <div class="table-wrap">
+        <table class="table" role="grid">
+          <thead><tr><th>Dagur</th><th>Svæði</th><th>Verkefni</th><th>Staða</th></tr></thead>
+          <tbody>
+            <tr><td>Mán</td><td>Narrows</td><td>Patrúl</td><td>🟢 Virkt</td></tr>
+            <tr><td>Þri</td><td>Midtown</td><td>Rannsókn</td><td>🟡 Í vinnslu</td></tr>
+            <tr><td>Mið</td><td>Harbor</td><td>Eftirlit</td><td>🟢 Virkt</td></tr>
+            <tr><td>Fim</td><td>Old Gotham</td><td>Gæslur</td><td>🔴 Brýnt</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FORM með skilyrtum reitum ===== -->
+  <section id="form" class="section alt">
+    <div class="wrap">
+      <h2>Tilkynna atvik</h2>
+  <form class="bat-form" id="incidentForm" method="get" action="takk fyrir að skrá atvik.html" novalidate>
+  <div class="grid">
+    <label> Nafn
+      <input type="text" name="name" required placeholder="Fornafn Eftirnafn">
+    </label>
+    <label> Tölvupóstur
+      <input type="email" name="email" required placeholder="nafn@dæmi.is">
+    </label>
+    <label> Tegund atviks
+      <select id="typeSelect" name="type" required>
+        <option value="">Veldu…</option>
+        <option value="sjons">Sjónarspil</option>
+        <option value="glaepur">Grunur um glæp</option>
+        <option value="stod">Beiðni um aðstoð</option>
+      </select>
+    </label>
+    <label> Staðsetning
+      <input type="text" name="loc" required placeholder="Gata, hverfi">
+    </label>
+
+    <!-- Skilyrt: birtist ef 'glaepur' -->
+    <div class="conditional" data-show="glaepur">
+      <label> Týpa glæps
+        <input type="text" name="crime" placeholder="t.d. innbrot">
+      </label>
+      <label> Brýnt?
+        <select name="prio"><option value="">Veldu…</option><option>Já</option><option>Nei</option></select>
+      </label>
+    </div>
+
+    <!-- Skilyrt: birtist ef 'stod' -->
+    <div class="conditional" data-show="stod">
+      <label class="full"> Lýsing
+        <textarea name="desc" rows="4" placeholder="Segðu nánar frá…"></textarea>
+      </label>
+    </div>
+
+    <label class="full">
+      <input type="checkbox" name="consent" value="yes" required> Ég samþykki meðferð gagna.
+    </label>
+  </div>
+
+  <!-- hnappur óvirkur þar til allt er gilt -->
+  <button class="btn primary" id="incidentSubmit" type="submit" disabled aria-disabled="true">Senda</button>
+  <p class="muted small">Fylla þarf út alla reiti áður en hægt er að senda.</p>
+</form>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Bat-vefur • HTML & CSS ✓</p>
+    </div>
+  </footer>
+
+  <!-- Smá JS: ár + þemurofi + skilyrt form (allt annað er hreint CSS) -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Ljóst/Dökkt
+    const root = document.documentElement, modeBtn = document.getElementById('modeBtn');
+    modeBtn.addEventListener('click', ()=>{ root.dataset.theme = root.dataset.theme==='dark'?'light':'dark'; });
+
+    // Skilyrtir reitir
+    const sel = document.getElementById('typeSelect');
+    const blocks = [...document.querySelectorAll('.conditional')];
+    function updateBlocks(){ const v=sel.value; blocks.forEach(b=>b.style.display = (b.dataset.show===v)?'contents':'none'); }
+    sel.addEventListener('change', updateBlocks); updateBlocks();
+  </script>
+  <script>
+  (function(){
+    const form = document.getElementById('incidentForm');
+    if(!form) return;
+
+    const submitBtn = document.getElementById('incidentSubmit');
+    const selectType = document.getElementById('typeSelect');
+    const conditionalBlocks = Array.from(document.querySelectorAll('.conditional'));
+
+    function syncConditional() {
+      const v = (selectType && selectType.value) || '';
+      conditionalBlocks.forEach(block => {
+        const show = block.dataset.show === v;
+        block.style.display = show ? 'contents' : 'none';
+        // gera reiti skyldubundna aðeins þegar hópurinn er sýnilegur
+        block.querySelectorAll('input, select, textarea').forEach(el => {
+          el.required = show;                 // t.d. crime/prio eða desc
+          if(!show){ el.value = ''; }         // hreinsa ef falinn
+        });
+      });
+      // dæmi: í „glaepur“ þarf prio að vera valið (ekki autt)
+      if (v === 'glaepur') {
+        const prio = form.querySelector('select[name="prio"]');
+        if (prio) prio.required = true;
+      }
+    }
+
+    function updateSubmitState(){
+      syncConditional();
+      const valid = form.checkValidity();
+      submitBtn.disabled = !valid;
+      submitBtn.setAttribute('aria-disabled', submitBtn.disabled ? 'true' : 'false');
+    }
+
+    form.addEventListener('input', updateSubmitState);
+    form.addEventListener('change', updateSubmitState);
+    updateSubmitState();
+  })();
+</script>
+
+</body>
+</html>
