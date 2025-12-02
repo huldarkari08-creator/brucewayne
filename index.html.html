@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="is" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wayne Enterprises – Viðburður</title>
+
+  <!-- Sama og á „batman“: Pico + batman.css -->
+  <link rel="stylesheet" href="css/pico.orange.css">
+  <link rel="stylesheet" href="css/batman.css">
+  <link rel="stylesheet" href="css/Wayne Enterprises.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== HEADER (Wayne) ===== -->
+  <header class="wayne-header">
+    <div class="wrap wayne-header-inner">
+
+      <!-- MIÐJA: LÓGÓ -->
+      <a href="#" class="wayne-logo-link">
+        <img src="myndir/Wayne_Enterprises.jpg" alt="Wayne Enterprises" class="wayne-logo">
+      </a>
+
+      <nav class="wayne-nav-left">
+        <a href="#vidburdur"><i class="icon-file-picture"></i> Viðburður</a>
+        <a href="#dagskra"><i class="icon-bubbles4"></i>Dagskrá</a>
+        <a href="#skraning"><i class="icon-user-check"></i>Skráning</a>
+      </nav>
+
+      <!-- HÆGRI: theme toggle -->
+      <div class="wayne-right">
+        <button class="mode" id="modeBtn" aria-label="Ljóst/Dökkt">🌗</button>
+      </div>
+
+      <!-- MOBILE HAMBURGER (bara sýnilegt á iPhone í CSS) -->
+      <input type="checkbox" id="nav-toggle">
+      <label for="nav-toggle" class="wayne-hamburger">≡</label>
+
+      <!-- MOBILE MENU -->
+  <nav class="wayne-mobile-menu">
+  <a href="#vidburdur"><i class="icon-file-picture"></i> Viðburður</a>
+  <a href="#dagskra"><i class="icon-bubbles4"></i>Dagskrá</a>
+  <a href="#skraning"><i class="icon-user-check"></i>Skráning</a>
+
+  <!-- NÝTT: Ljóst/Dökkt takki inni í drop-down menu -->
+  <button class="mode mode-mobile" type="button">🌗</button>
+  </nav>
+
+    </div>
+  </header>
+<section class="hero">
+    <div class="brand-center">
+  <img src="myndir/Wayne_Enterprises.jpg" alt="Batman Logo" class="batman-symbol" />
+    </div>
+  <div class="wrap hero-inner">
+    <h1>bruce wayne</h1>
+    <p class="lead"></p>
+
+    <!-- Batman-myndin situr INNI í boxinu og hreyfist með því -->
+    <div class="signal">
+      <img class="signal-img" src="myndir/bruce wayne.jpg" alt="Batman" />
+    </div>
+  </div>
+</section>
+  <!-- ===== VIÐBURÐUR ===== -->
+  <section id="vidburdur" class="section">
+    <div class="wrap">
+      <h2>Upplýsingar um viðburð</h2>
+
+      <!-- Athyglis-banner með kvikun -->
+      <div class="event-banner" role="status" aria-live="polite">
+        <strong>⚡ Nýtt!</strong> Skráning er opin – takmörkuð sæti.
+      </div>
+
+      <!-- Upplýsingar + tímasetning -->
+      <div class="event-grid">
+        <article class="event-card">
+          <h3>Um viðburðinn</h3>
+          <p>Hittumst í Gotham og förum yfir nýjustu tækni í borgarvörnum, öryggi og hönnun næturvaktar.</p>
+          <ul class="event-list">
+            <li><strong>Staðsetning:</strong> Wayne Tower, Midtown Gotham</li>
+            <li><strong>Markhópur:</strong> Hönnuðir, forritarar og áhugafólk</li>
+            <li><strong>Tungumál:</strong> Íslenska / Enska</li>
+          </ul>
+        </article>
+
+        <article class="event-card">
+          <h3>Tímasetning</h3>
+          <p><strong>Dagsetning:</strong> 24. janúar 2026</p>
+          <p><strong>Tími:</strong> 13:00 – 17:30</p>
+          <p><strong>Hlið opnast:</strong> 12:30</p>
+        </article>
+      </div>
+  <!-- ===== MYNDASÝNING (slideshow – pure CSS) ===== -->
+  <section id="slideshow" class="section alt">
+    <div class="wrap">
+      <h2>Myndasýning</h2>
+      <div class="slideshow">
+        <figure class="slide s1"><img src="myndir/bruce wayne's house.jpg" alt="bruce waynes house"></figure>
+        <figure class="slide s2"><img src="myndir/bruce wayne 2.jpg" alt="brucewayne"></figure>
+        <figure class="slide s3"><img src="myndir/Wayne_Enterprises2.jpg" alt="wayne enterprises"></figure>
+      </div>
+    </div>
+  </section>
+      <!-- Dagskrá -->
+      <h3 id="dagskra" class="event-subtitle">Dagskrá</h3>
+      <div class="table-wrap">
+        <table class="table event-agenda" role="grid">
+          <thead>
+            <tr><th>Tími</th><th>Lýsing</th><th>Flytjandi</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>13:00</td><td>Opnun og „signal“</td><td>Alfred</td></tr>
+            <tr><td>13:20</td><td>Hönnun kvikunar í viðmóti</td><td>Lucius Fox</td></tr>
+            <tr><td>14:10</td><td>Kaffi & samskipti</td><td>–</td></tr>
+            <tr><td>14:40</td><td>Öryggi í vefumsjón</td><td>Oracle</td></tr>
+            <tr><td>15:30</td><td>Verkstæði: Slideshow án JS</td><td>Barbara G.</td></tr>
+            <tr><td>16:30</td><td>Spurningar & pallborð</td><td>Panel</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Skráning (fer á takk fyrir að skrá þig.html) -->
+      <h3 id="skraning" class="event-subtitle">Skráning á viðburðinn</h3>
+      <form
+        class="bat-form event-form"
+        id="eventForm"
+        method="get"
+        action="takk fyrir að skrá þig.html"
+        novalidate
+      >
+        <div class="grid">
+          <label> Nafn
+            <input type="text" name="name" placeholder="Fornafn Eftirnafn" required>
+          </label>
+          <label> Tölvupóstur
+            <input type="email" name="email" placeholder="nafn@dæmi.is" required>
+          </label>
+          <label> Mæti með
+            <select name="attend" required>
+              <option value="">Veldu…</option>
+              <option value="ein">Einn</option>
+              <option value="gestur">Með gesti</option>
+            </select>
+          </label>
+          <label> Áhugasvið
+            <select id="regType" name="interest" required>
+              <option value="">Veldu…</option>
+              <option value="honnun">Hönnun</option>
+              <option value="forritun">Forritun</option>
+            </select>
+          </label>
+
+          <!-- Skilyrt svæði: birtist ef Áhugasvið = Hönnun -->
+          <div class="conditional" data-show="honnun">
+            <label class="full"> Séróskir um efni
+              <textarea name="design_notes" rows="3" placeholder="t.d. hreyfimynstur, micro-interactions"></textarea>
+            </label>
+          </div>
+
+          <!-- Skilyrt svæði: birtist ef Áhugasvið = Forritun -->
+          <div class="conditional" data-show="forritun">
+            <label class="full"> Tól og tæki
+              <input type="text" name="dev_tools" placeholder="t.d. Vanilla CSS, Pico, performance tips">
+            </label>
+          </div>
+
+          <label class="full">
+            <input type="checkbox" name="consent" value="yes" required>
+            Samþykki skilmála skráningar.
+          </label>
+        </div>
+
+        <button class="btn primary" id="submitBtn" type="submit" disabled aria-disabled="true">
+          Skrá
+        </button>
+        <p class="muted small">Ath.: Þetta er aðeins útlit forms — engin gagnavinnsla.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== UM FYRIRTÆKIÐ – EIGIN BAR ===== -->
+  <section id="fyrirtaeki" class="section company-bar">
+    <div class="wrap">
+      <h3 class="event-subtitle">Um fyrirtækið</h3>
+
+      <div class="company">
+        <img src="myndir/Wayne_Enterprises.jpg" alt="Wayne Enterprises" class="company-logo">
+        <div>
+          <p><strong>Wayne Enterprises</strong> heldur árlegan viðburð um hönnun, öryggi og tækni í Gotham. ef þú vilt vita meira ýtu á link</p>
+          <p class="muted">
+            Heimilisfang: 1007 Mountain Drive, Gotham • Vefur:
+            <a href="bruce wayne-wayne enterprises.html"
+              class="company-link">
+            wayneenterprises.example
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Wayne Enterprises • HTML5 & CSS</p>
+    </div>
+  </footer>
+<!-- Lítið Batman-tákn í hægra neðra horninu -->
+<a href="batman.html" class="batman-corner" aria-label="Opna Batman vefinn">
+  <svg class="batman-corner-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 32" aria-hidden="true">
+    <path d="M32 0C20 4 10 12 6 20c2 4 8 8 10 10 4 2 8 2 8 2s-2-4 0-8 4-4 8-4 6 0 8 4 0 8 0 8 4 0 8-2c2-2 8-6 10-10-4-8-14-16-26-20z"
+          fill="currentColor"/>
+  </svg>
+</a>
+
+  <!-- ===== JS: ár, þemurofi, skilyrt form, virkja „Skrá“ þegar allt er gilt ===== -->
+  <script>
+    // ár í footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Ljóst/Dökkt - virkar bæði á desktop og í mobile drop-down
+  const root = document.documentElement;
+  document.querySelectorAll('.mode').forEach(btn => {
+    btn.addEventListener('click', () => {
+      root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    });
+  });
+    // Skilyrtir reitir + disable „Skrá“ þar til allt er gilt
+    (function(){
+      const form = document.getElementById('eventForm');
+      if(!form) return;
+      const submitBtn = document.getElementById('submitBtn');
+      const sel = document.getElementById('regType');
+      const blocks = Array.from(document.querySelectorAll('.conditional'));
+
+      function syncConditional(){
+        const v = (sel && sel.value) || '';
+        blocks.forEach(b=>{
+          const show = b.dataset.show===v;
+          b.style.display = show ? 'contents' : 'none';
+          b.querySelectorAll('input,select,textarea').forEach(el=> el.required = show);
+          if(!show){
+            b.querySelectorAll('input,textarea').forEach(el=> el.value='');
+          }
+        });
+      }
+      function updateState(){
+        syncConditional();
+        const ok = form.checkValidity();
+        submitBtn.disabled = !ok;
+        submitBtn.setAttribute('aria-disabled', submitBtn.disabled ? 'true' : 'false');
+      }
+      form.addEventListener('input', updateState);
+      form.addEventListener('change', updateState);
+      updateState();
+    })();
+  </script>
+  
+</body>
+</html>
